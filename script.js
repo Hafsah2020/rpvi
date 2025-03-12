@@ -5,6 +5,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     menuToggle.addEventListener("click", () => {
         navLinks.classList.toggle("show");
+        document.body.classList.toggle("no-scroll"); // Prevent scrolling when menu is open
+    });
+
+    // Close menu when a link is clicked
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("show");
+            document.body.classList.remove("no-scroll");
+        });
     });
 
     // Carousel Functionality
@@ -19,3 +28,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setInterval(showNextTestimonial, 4000);
 });
+
