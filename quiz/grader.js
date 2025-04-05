@@ -37,7 +37,7 @@
     };
 
     // Send to Google Sheets Web App
-    fetch('YOUR_WEB_APP_URL_HERE', {
+    fetch('https://script.google.com/macros/s/AKfycbz_aM2uHHptz4hO50xndOhC_NT83wNQ8ud5gL7bT892LrdUUWfUqeGMXcf_PaiEUUQ_/exec', {
       method: 'POST',
       mode: 'no-cors', // Prevents CORS errors
       headers: {
