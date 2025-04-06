@@ -3,34 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <title>Take the Quiz</title>
-  <link rel="stylesheet" href="questions_style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <script src="grader.js"></script>
   <div class="quiz-container">
     <h2>RPVI Knowledge Quiz</h2>
     <form id="quizForm">
-      <input type="text" name="name" placeholder="Your name" required><br><br>
-    
-      <h3>1. What is the capital of Nigeria?</h3>
-      <label><input type="radio" name="q1" value="Lagos"> Lagos</label><br>
-      <label><input type="radio" name="q1" value="Abuja"> Abuja</label><br>
-      <label><input type="radio" name="q1" value="Kano"> Kano</label><br><br>
-    
-      <h3>2. What is 2 + 2?</h3>
-      <label><input type="radio" name="q2" value="3"> 3</label><br>
-      <label><input type="radio" name="q2" value="4"> 4</label><br>
-      <label><input type="radio" name="q2" value="5"> 5</label><br><br>
-    
-      <button type="submit">Submit</button>
+      <label>Name: <input type="text" name="name" required></label>
+
+      <!-- Example questions (add more as needed) -->
+      <div class="question">
+        <p>1. What is the capital of Nigeria?</p>
+        <label><input type="radio" name="q1" value="Lagos"> Lagos</label>
+        <label><input type="radio" name="q1" value="Abuja"> Abuja</label>
+        <label><input type="radio" name="q1" value="Kano"> Kano</label>
+      </div>
+
+      <div class="question">
+        <p>2. What is 2 + 2?</p>
+        <label><input type="radio" name="q2" value="3"> 3</label>
+        <label><input type="radio" name="q2" value="4"> 4</label>
+        <label><input type="radio" name="q2" value="5"> 5</label>
+      </div>
+
+      <!-- Add questions 3 to 20 following the same structure -->
+
+      <button type="submit" class="btn quiz">Submit</button>
     </form>
-    
-    <div id="timer">Time: 0s</div>
-    
-    <script src="script.js"></script>
-    
-    
   </div>
 
-  </body>
+  <script src="grader.js">
+  </script>
+</body>
 </html>
