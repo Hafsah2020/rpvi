@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Results</title>
+  <link rel="stylesheet" href="questions_style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Quiz Results</h1>
+    <div id="result-message">
+      <p id="userName"></p>
+      <p id="userScore"></p>
+      <p id="timeTaken"></p>
+    </div>
+    <button onclick="window.location.href='questions.html'">Go Back</button>
+  </div>
+
+  <script>
+    // Extract query parameters from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+    const score = urlParams.get('score');
+    const time = urlParams.get('time');
+
+    // Display the results
+    document.getElementById('userName').textContent = `Name: ${name}`;
+    document.getElementById('userScore').textContent = `Score: ${score}/20`;
+    document.getElementById('timeTaken').textContent = `Time: ${time} seconds`;
+  </script>
+</body>
+</html>
