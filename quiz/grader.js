@@ -4,22 +4,22 @@
   document.getElementById('quizForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const quizEndTime = Date.now();
-    const timeTaken = Math.floor((quizEndTime - quizStartTime) / 1000); // in seconds
+    let startTime = performance.timing.navigationStart;
+    let endTime = new Date().getTime();
+    let timeTaken = Math.floor((endTime - startTime) / 1000); // in seconds
 
     const form = new FormData(this);
     const name = form.get('name');
 
-    // ✅ Correct answers list (update for all your 20 questions)
     const correctAnswers = {
       q1: 'Abuja',
       q2: '4',
-      // Add more: q3: 'Answer3', q4: 'Answer4', ..., q20: 'Answer20'
+      // Add more like: q3: 'Answer', q4: 'Answer', ...
     };
 
     let score = 0;
-    for (let key in correctAnswers) {
-      if (form.get(key) === correctAnswers[key]) {
+    for (let q in correctAnswers) {
+      if (form.get(q) === correctAnswers[q]) {
         score++;
       }
     }
