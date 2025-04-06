@@ -27,7 +27,7 @@ document.getElementById('quizForm').addEventListener('submit', function (e) {
     time: timeTaken
   };
 
-  fetch('https://script.google.com/macros/s/AKfycbz_aM2uHHptz4hO50xndOhC_NT83wNQ8ud5gL7bT892LrdUUWfUqeGMXcf_PaiEUUQ_/exec', {
+  fetch('https://script.google.com/macros/s/AKfycbzCuQPqI8KIfI0o1drjKviSvTY2DjbSTW8enNSrUgJeJmDQ9k7WNifWt69MSVzxBV-w/exec', {
     method: 'POST',
     mode: 'no-cors',
     headers: {
