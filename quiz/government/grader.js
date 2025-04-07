@@ -29,57 +29,19 @@ window.addEventListener('load', function () {
     const name = form.get('name');
 
     const correctAnswers = {
-      q1: 'Abuja',
-      q2: '4',
-      q3: '1',
-      q4: '32',
-      q5: '4',
-      q6: '2',
-      q7: '7',
-      q8: '0.75',
-      q9: '64',
-      q10: '1/2',
-      q11: '100',
-      q12: '1000',
-      q13: '16',
-      q14: '35',
-      q15: '0.25',
-      q16: '16',
-      q17: '2',
-      q18: '45',
-      q19: '50',
-      q20: '3',
-      q21: '0.5',
-      q22: '50',
-      q23: '35',
-      q24: '64',
-      q25: '9',
-      q26: '4',
-      q27: '0.2',
-      q28: '45',
-      q29: '128',
-      q30: '128',
-      q31: '16',
-      q32: '16',
-      q33: '5',
-      q34: '1/4',
-      q35: '2',
-      q36: '9',
-      q37: '2/3',
-      q38: '16',
-      q39: '1/2',
-      q40: '0.75',
-      q41: '32',
-      q42: '50',
-      q43: '2',
-      q44: '3',
-      q45: '21',
-      q46: '128',
-      q47: '0.875',
-      q48: '144',
-      q49: '60',
-      q50: '1/2'
-    };
+      q1: 'A',   // A document containing the laws of a country
+      q2: 'B',   // Documented and codified
+      q3: 'B',   // Rigid and federal
+      q4: 'B',   // Supremacy of the central government
+      q5: 'B',   // Amendment
+      q6: 'B',   // The objectives and guiding principles
+      q7: 'C',   // The Judiciary
+      q8: 'B',   // It ensures stability
+      q9: 'C',   // Chapter 4
+      q10: 'B',  // State government
+  };
+  
+        
 
     let score = 0;
     for (let q in correctAnswers) {
@@ -98,7 +60,7 @@ window.addEventListener('load', function () {
     clearInterval(timerInterval);
 
     // Fetch request to post the data
-    fetch('https://script.google.com/macros/s/AKfycbzCuQPqI8KIfI0o1drjKviSvTY2DjbSTW8enNSrUgJeJmDQ9k7WNifWt69MSVzxBV-w/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbzoxO77o6p2VYCbUsalHn4XhyhAaVcSOHAVYs0aJ7uzSteg_u4HZ1_URzbXjOVncBFpmA/exec', {
       method: 'POST',
       mode: 'no-cors',
       headers: {
