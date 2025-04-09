@@ -49,7 +49,7 @@ window.addEventListener('load', function () {
     q18: "C",  // Complex
     q19: "B",  // Who is at the door?
     q20: "A",  // Please close the door.
-    q21: "B",  // start
+    q21: "B",  // bankrupt
     q22: "B",  // selfish
     q23: "B",  // old
     q24: "B",  // departure
