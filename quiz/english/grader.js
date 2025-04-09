@@ -28,59 +28,35 @@ window.addEventListener('load', function () {
     const form = new FormData(this);
     const name = form.get('name');
 
-    const correctAnswers = {
-      q1: 'Abuja',
-      q2: '4',
-      q3: '1',
-      q4: '32',
-      q5: '4',
-      q6: '2',
-      q7: '7',
-      q8: '0.75',
-      q9: '64',
-      q10: '1/2',
-      q11: '100',
-      q12: '1000',
-      q13: '16',
-      q14: '35',
-      q15: '0.25',
-      q16: '16',
-      q17: '2',
-      q18: '45',
-      q19: '50',
-      q20: '3',
-      q21: '0.5',
-      q22: '50',
-      q23: '35',
-      q24: '64',
-      q25: '9',
-      q26: '4',
-      q27: '0.2',
-      q28: '45',
-      q29: '128',
-      q30: '128',
-      q31: '16',
-      q32: '16',
-      q33: '5',
-      q34: '1/4',
-      q35: '2',
-      q36: '9',
-      q37: '2/3',
-      q38: '16',
-      q39: '1/2',
-      q40: '0.75',
-      q41: '32',
-      q42: '50',
-      q43: '2',
-      q44: '3',
-      q45: '21',
-      q46: '128',
-      q47: '0.875',
-      q48: '144',
-      q49: '60',
-      q50: '1/2'
-    };
+    answers = {
+      q1: "B",  // Lekki, Lagos
+      q2: "B",  // Mr. Bepo
+      q3: "C",  // Headmaster
+      q4: "B",  // He humorously imitated characters from "The Village Headmaster"
+      q5: "D",  // All of the above
+      q6 : "A",  // Ikogosi Warm Springs
+      q7: "B",  //Idumota Market
+      q8: "C",  // By engaging in dialogue and demonstrating the benefits of his reforms
+      q9: "C",  // Skeptical and resistant to change
+      q10: "C",  // Progressive educational reforms and dedication
+    q11: "C",  // is
+    q12: "A",  // was
+    q13: "D",  // is
+    q14: "C",  // is
+    q15: "C",  // has
+    q16: "B",  // She ran fast and he walked slowly.
+    q17: "C",  // He jumped.
+    q18: "C",  // Complex
+    q19: "B",  // Who is at the door?
+    q20: "A",  // Please close the door.
+    q21: "B",  // start
+    q22: "B",  // selfish
+    q23: "B",  // old
+    q24: "B",  // departure
+    q25: "A"   // joyful
+};
 
+  
     let score = 0;
     for (let q in correctAnswers) {
       if (form.get(q) === correctAnswers[q]) {
