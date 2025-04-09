@@ -39,6 +39,16 @@ window.addEventListener('load', function () {
       q8: 'B',   // It ensures stability
       q9: 'C',   // Chapter 4
       q10: 'B',  // State government
+      q11: 'A',
+      q12: 'A',
+      q13: 'A',
+      q14: 'A',
+      q15: 'A',
+      q16: 'A',
+      q17: 'A',
+      q18: 'A',
+      q19: 'A',
+      q20: 'A'
   };
   
         
