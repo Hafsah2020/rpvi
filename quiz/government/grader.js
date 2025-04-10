@@ -29,27 +29,27 @@ window.addEventListener('load', function () {
     const name = form.get('name');
 
     const correctAnswers = {
-      q1: 'A',   // A document containing the laws of a country
-      q2: 'B',   // Documented and codified
-      q3: 'B',   // Rigid and federal
-      q4: 'B',   // Supremacy of the central government
-      q5: 'B',   // Amendment
-      q6: 'B',   // The objectives and guiding principles
-      q7: 'C',   // The Judiciary
-      q8: 'B',   // It ensures stability
-      q9: 'C',   // Chapter 4
-      q10: 'B',  // State government
-      q11: 'A',
-      q12: 'A',
-      q13: 'A',
-      q14: 'A',
-      q15: 'A',
-      q16: 'A',
-      q17: 'A',
-      q18: 'A',
-      q19: 'A',
-      q20: 'A'
-  };
+      q1: 'B',    
+      q2: 'B',    
+      q3: 'C',    
+      q4: 'B',    
+      q5: 'C',     
+      q6: 'A',     
+      q7: 'D',     
+      q8: 'B',     
+      q9: 'A',     
+      q10: 'D',    
+      q11: 'B',    
+      q12: 'B',    
+      q13: 'C',    
+      q14: 'A',    
+      q15: 'C',    
+      q16: 'B',    
+      q17: 'A',    
+      q18: 'C',    
+      q19: 'C',    
+      q20: 'D',    
+};
   
         
 
@@ -70,7 +70,7 @@ window.addEventListener('load', function () {
     clearInterval(timerInterval);
 
     // Fetch request to post the data
-    fetch('https://script.google.com/macros/s/AKfycbzoxO77o6p2VYCbUsalHn4XhyhAaVcSOHAVYs0aJ7uzSteg_u4HZ1_URzbXjOVncBFpmA/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbzCuQPqI8KIfI0o1drjKviSvTY2DjbSTW8enNSrUgJeJmDQ9k7WNifWt69MSVzxBV-w/exec', {
       method: 'POST',
       mode: 'no-cors',
       headers: {

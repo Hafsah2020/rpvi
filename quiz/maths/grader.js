@@ -27,6 +27,7 @@ window.addEventListener('load', function () {
 
     const form = new FormData(this);
     const name = form.get('name');
+    const subject = form.get('subject');
 
     const correctAnswers = {
       q1: 'B',    
@@ -63,6 +64,7 @@ window.addEventListener('load', function () {
     const data = {
       name: name,
       score: score,
+      subject: subject,
       time: timeTaken
     };
 
