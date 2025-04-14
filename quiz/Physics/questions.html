@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>General Knowledge Quiz</title>
+  <link rel="stylesheet" href="questions_styles.css" />
+</head>
+<body>
+  <div class="page-background">
+    <div class="quiz-wrapper">
+      <h1>General Knowledge Quiz</h1>
+      <div class="quiz-container">
+        <form id="quiz-form">
+          <label>
+            Name: <input type="text" id="user-name" required />
+          </label>
+          <br>
+          <label>
+            Subject: <input type="text" id="quiz-subject" value="General Knowledge" required />
+          </label>
+          <br><br>          
+          <!-- Example Question -->
+          <div class="question">
+            <p>1. What is the capital of France?</p>
+            <label><input type="radio" name="q1" value="A" /> A) Madrid</label>
+            <label><input type="radio" name="q1" value="B" /> B) Berlin</label>
+            <label><input type="radio" name="q1" value="C" /> C) Paris</label>
+            <label><input type="radio" name="q1" value="D" /> D) Rome</label>
+          </div>
+
+          <!-- Repeat questions 2 to 20 here with similar structure -->
+
+          <button type="submit">Submit Quiz</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let startTime = Date.now(); // Start tracking time on page load
+  
+    document.getElementById("quiz-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+  
+      // Get user info
+      const name = document.getElementById("user-name").value;
+      const subject = document.getElementById("quiz-subject").value;
+  
+      // Calculate time spent
+      const timeSpent = Math.floor((Date.now() - startTime) / 1000) + " seconds";
+  
+      // Calculate score (example: 1 point for correct answer to Q1)
+      let score = 0;
+      const answerQ1 = document.querySelector('input[name="q1"]:checked');
+      if (answerQ1 && answerQ1.value === "C") score++;
+  
+      // Add logic here for Q2–Q20...
+  
+      // Send results to Google Sheet
+      sendResultsToSheet(name, score, subject, timeSpent);
+    });
+  
+    function sendResultsToSheet(name, score, subject, timeSpent) {
+      const url = "https://script.google.com/macros/s/AKfycbxPrcQrssk0sECqw7Qqn5mhnRmA6NcuDZZVhboXtXqDMra60xqnOATizh2_2glbFJwabQ/exec"; // Replace with your Web App URL
+  
+      const payload = {
+        name: name,
+        score: score,
+        subject: subject,
+        timeSpent: timeSpent
+      };
+  
+      fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(payload),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+        alert("Results submitted successfully!");
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    }
+  </script>
+  
+  
+</body>
+</html>
